@@ -7,7 +7,7 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <!-- Заголовок -->
+    
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
@@ -19,7 +19,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"/>
 
-    <!-- Текстовое поле "Информация" (между заголовком и жёлтой кнопкой) -->
+    
     <TextView
         android:id="@+id/infoText"
         android:layout_width="wrap_content"
@@ -31,7 +31,7 @@
         android:layout_below="@id/titleText"
         android:layout_marginTop="24dp"/>
 
-    <!-- Жёлтая кнопка (центр, выше) -->
+    
     <Button
         android:id="@+id/yellowButton"
         android:layout_width="100dp"
@@ -43,7 +43,7 @@
         android:layout_below="@id/infoText"
         android:layout_marginTop="32dp"/>
 
-    <!-- Серый индикатор (над жёлтой кнопкой) -->
+  
     <View
         android:id="@+id/grayIndicator"
         android:layout_width="150dp"
@@ -53,7 +53,7 @@
         android:layout_above="@id/yellowButton"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Красная кнопка (левый нижний угол) -->
+   
     <Button
         android:id="@+id/redButton"
         android:layout_width="100dp"
@@ -66,7 +66,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Оранжевая кнопка (над красной) -->
+  
     <Button
         android:id="@+id/orangeButton"
         android:layout_width="80dp"
@@ -78,7 +78,7 @@
         android:layout_alignLeft="@id/redButton"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Синяя кнопка (правый нижний угол) -->
+  
     <Button
         android:id="@+id/blueButton"
         android:layout_width="100dp"
@@ -91,7 +91,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Фиолетовая кнопка (над синей) -->
+   
     <Button
         android:id="@+id/purpleButton"
         android:layout_width="80dp"
@@ -103,9 +103,9 @@
         android:layout_alignRight="@id/blueButton"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Добавьте эти элементы в ваш activity_main.xml после остальных элементов -->
+    
 
-    <!-- Левая панель -->
+    
     <View
         android:id="@+id/leftPanel"
         android:layout_width="80dp"
@@ -115,7 +115,7 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="32dp"/>
 
-    <!-- Центральная панель -->
+    
     <View
         android:id="@+id/centerPanel"
         android:layout_width="80dp"
@@ -123,7 +123,7 @@
         android:background="#2196F3"
         android:layout_centerInParent="true"/>
 
-    <!-- Правая панель -->
+
     <View
         android:id="@+id/rightPanel"
         android:layout_width="80dp"
