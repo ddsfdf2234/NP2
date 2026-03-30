@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5F5F5F"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Заголовок -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Начальная учебная нагрузка"
+        android:textSize="24sp"
+        android:textColor="#333333"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Текстовое поле "Информация" (между заголовком и жёлтой кнопкой) -->
+    <TextView
+        android:id="@+id/infoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Дополнительная информация"
+        android:textSize="14sp"
+        android:textColor="#455A64"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/titleText"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Жёлтая кнопка (центр, выше) -->
+    <Button
+        android:id="@+id/yellowButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Жёлтая"
+        android:textSize="14sp"
+        android:background="#FFC107"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/infoText"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Серый индикатор (над жёлтой кнопкой) -->
+    <View
+        android:id="@+id/grayIndicator"
+        android:layout_width="150dp"
+        android:layout_height="10dp"
+        android:background="#757575"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/yellowButton"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Красная кнопка (левый нижний угол) -->
+    <Button
+        android:id="@+id/redButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Красный"
+        android:textSize="14sp"
+        android:background="#D32F2F"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Оранжевая кнопка (над красной) -->
+    <Button
+        android:id="@+id/orangeButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="Оранж"
+        android:textSize="14sp"
+        android:background="#FF9800"
+        android:layout_above="@id/redButton"
+        android:layout_alignLeft="@id/redButton"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Синяя кнопка (правый нижний угол) -->
+    <Button
+        android:id="@+id/blueButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Синий"
+        android:textSize="14sp"
+        android:background="#2196F3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Фиолетовая кнопка (над синей) -->
+    <Button
+        android:id="@+id/purpleButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="Фиол"
+        android:textSize="14sp"
+        android:background="#9C27B0"
+        android:layout_above="@id/blueButton"
+        android:layout_alignRight="@id/blueButton"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Добавьте эти элементы в ваш activity_main.xml после остальных элементов -->
+
+    <!-- Левая панель -->
+    <View
+        android:id="@+id/leftPanel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#64B5F6"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="32dp"/>
+
+    <!-- Центральная панель -->
+    <View
+        android:id="@+id/centerPanel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#2196F3"
+        android:layout_centerInParent="true"/>
+
+    <!-- Правая панель -->
+    <View
+        android:id="@+id/rightPanel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#1976D2"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="32dp"/>
+
+</RelativeLayout>
