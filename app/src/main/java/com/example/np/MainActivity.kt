@@ -10,7 +10,7 @@ import android.widget.Toast
 
 class MainActivity : Activity() {
 
-    // Элементы интерфейса
+   
     private lateinit var titleText: TextView
     private lateinit var infoText: TextView
     private lateinit var redButton: Button
@@ -20,15 +20,15 @@ class MainActivity : Activity() {
     private lateinit var purpleButton: Button
     private lateinit var grayIndicator: View
 
-    // Панели (если они есть в вашем макете)
+  
     private lateinit var leftPanel: View
     private lateinit var centerPanel: View
     private lateinit var rightPanel: View
 
-    // Переменные для отслеживания состояния
+  
     private var progress = 0
 
-    // Цвета для панелей
+    
     companion object {
         private val COLOR_LIGHT_BLUE = Color.parseColor("#64B5F6")
         private val COLOR_BLUE = Color.parseColor("#2196F3")
@@ -40,18 +40,18 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Инициализация элементов интерфейса
+     
         initViews()
 
-        // Настройка обработчиков кнопок
+       
         setupClickListeners()
 
-        // Установка начального состояния
+       
         resetToInitialState()
     }
 
     private fun initViews() {
-        // Существующие элементы
+        
         titleText = findViewById(R.id.titleText)
         infoText = findViewById(R.id.infoText)
         redButton = findViewById(R.id.redButton)
@@ -61,95 +61,95 @@ class MainActivity : Activity() {
         purpleButton = findViewById(R.id.purpleButton)
         grayIndicator = findViewById(R.id.grayIndicator)
 
-        // Панели - замените ID на ваши, если они называются иначе
+       
         leftPanel = findViewById(R.id.leftPanel)
         centerPanel = findViewById(R.id.centerPanel)
         rightPanel = findViewById(R.id.rightPanel)
     }
 
     private fun setupClickListeners() {
-        // Желтая кнопка - "Добавить прогресс"
+     
         yellowButton.setOnClickListener {
             addProgress()
         }
 
-        // Красная кнопка - "Сброс"
+      
         redButton.setOnClickListener {
             resetToInitialState()
         }
 
-        // Синяя кнопка - "Инфо"
+       
         blueButton.setOnClickListener {
             showInfo()
         }
 
-        // Оранжевая и фиолетовая кнопки - без логики (только отображение)
+        
         orangeButton.setOnClickListener {
-            // Пусто - по условию не добавляем обработчики
+           
         }
 
         purpleButton.setOnClickListener {
-            // Пусто - по условию не добавляем обработчики
+           
         }
     }
 
     private fun addProgress() {
-        // Увеличиваем прогресс на 10%
+      
         progress += 10
 
-        // Ограничиваем прогресс 100%
+       
         if (progress > 100) {
             progress = 100
         }
 
-        // Обновляем состояние панелей в зависимости от прогресса
+        
         updatePanelsByProgress()
 
-        // Показываем уведомление о текущем прогрессе
+      
         Toast.makeText(this, "Прогресс: $progress%", Toast.LENGTH_SHORT).show()
 
-        // Обновляем информационное текстовое поле
+  
         updateInfoText()
     }
 
     private fun updatePanelsByProgress() {
         when {
             progress >= 100 -> {
-                // При 100%: Правая панель зеленая
+           
                 rightPanel.setBackgroundColor(COLOR_GREEN)
                 centerPanel.setBackgroundColor(COLOR_BLUE)
                 leftPanel.setBackgroundColor(COLOR_LIGHT_BLUE)
             }
             progress >= 70 -> {
-                // При 70%: Центральная панель зеленая
+              
                 centerPanel.setBackgroundColor(COLOR_GREEN)
                 leftPanel.setBackgroundColor(COLOR_LIGHT_BLUE)
                 rightPanel.setBackgroundColor(COLOR_DARK_BLUE)
             }
             progress >= 30 -> {
-                // При 30%: Левая панель зеленая
+                
                 leftPanel.setBackgroundColor(COLOR_GREEN)
                 centerPanel.setBackgroundColor(COLOR_BLUE)
                 rightPanel.setBackgroundColor(COLOR_DARK_BLUE)
             }
             else -> {
-                // Начальное состояние
+             
                 resetPanels()
             }
         }
     }
 
     private fun resetToInitialState() {
-        // Сбрасываем прогресс
+      
         progress = 0
 
-        // Возвращаем панели к исходным цветам
+        
         resetPanels()
 
-        // Обновляем информационное поле
+        
         updateInfoText()
 
-        // Показываем уведомление о сбросе
+     
         Toast.makeText(this, "Состояние сброшено", Toast.LENGTH_SHORT).show()
     }
 
@@ -160,7 +160,7 @@ class MainActivity : Activity() {
     }
 
     private fun showInfo() {
-        // Показываем информацию о текущем прогрессе
+       
         val infoMessage = when {
             progress >= 100 -> "Этап 3: Правая панель зеленая (прогресс 100%)"
             progress >= 70 -> "Этап 2: Центральная панель зеленая (прогресс ≥ 70%)"
